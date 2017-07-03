@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Cll-EV-PCa" customClass="ProfileInfosView1" customModule="OMCRecipeViewer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="267" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRQ-1E-gBF">
+                    <rect key="frame" x="15" y="15" width="252" height="85"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_image" translatesAutoresizingMaskIntoConstraints="NO" id="IRf-wH-7da">
+                            <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="IRf-wH-7da" secondAttribute="height" id="xXf-pB-B4x"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYx-b0-e0J">
+                            <rect key="frame" x="85" y="0.0" width="167" height="85"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45A-yk-h3r">
+                                    <rect key="frame" x="44" y="10" width="80" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="8A7-I3-B5y"/>
+                                        <constraint firstAttribute="width" constant="80" id="x6h-3V-xpC"/>
+                                    </constraints>
+                                    <state key="normal" title="Edit Profile"/>
+                                    <connections>
+                                        <action selector="didPushEditButton" destination="Cll-EV-PCa" eventType="touchUpInside" id="yzH-pX-lvI"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuX-Zq-zYD">
+                                    <rect key="frame" x="58" y="39" width="52" height="30"/>
+                                    <state key="normal" title="Log out"/>
+                                    <connections>
+                                        <action selector="didPushLogOutButton" destination="Cll-EV-PCa" eventType="touchUpInside" id="KcD-8M-SNZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="YuX-Zq-zYD" firstAttribute="top" secondItem="45A-yk-h3r" secondAttribute="bottom" constant="-1" id="8Mi-q6-GRl"/>
+                                <constraint firstItem="45A-yk-h3r" firstAttribute="centerX" secondItem="gYx-b0-e0J" secondAttribute="centerX" id="ChF-ve-kkQ"/>
+                                <constraint firstItem="YuX-Zq-zYD" firstAttribute="centerX" secondItem="gYx-b0-e0J" secondAttribute="centerX" id="KR6-wa-Ed1"/>
+                                <constraint firstItem="45A-yk-h3r" firstAttribute="top" secondItem="gYx-b0-e0J" secondAttribute="top" constant="10" id="uUm-zh-g0b"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="IRf-wH-7da" firstAttribute="top" secondItem="KRQ-1E-gBF" secondAttribute="top" id="N4p-AT-zgk"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="KRQ-1E-gBF" secondAttribute="trailing" id="RpZ-a2-Qel"/>
+                <constraint firstAttribute="bottom" secondItem="KRQ-1E-gBF" secondAttribute="bottom" constant="15" id="Tx8-vt-aAU"/>
+                <constraint firstItem="KRQ-1E-gBF" firstAttribute="top" secondItem="Cll-EV-PCa" secondAttribute="top" constant="15" id="if2-pb-qWO"/>
+                <constraint firstItem="KRQ-1E-gBF" firstAttribute="leading" secondItem="Cll-EV-PCa" secondAttribute="leading" constant="15" id="nS3-RH-xos"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="edit" destination="45A-yk-h3r" id="sTO-IC-5aZ"/>
+                <outlet property="image" destination="IRf-wH-7da" id="FMW-ky-Z8G"/>
+                <outlet property="logout" destination="YuX-Zq-zYD" id="FEo-Yz-IDa"/>
+            </connections>
+            <point key="canvasLocation" x="128.5" y="-84.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="user_image" width="170" height="170"/>
+    </resources>
+</document>
